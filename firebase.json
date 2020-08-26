@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/k-sjer",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
