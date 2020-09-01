@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { Image } from './../../../models/image';
 import { Item } from './../../../models/item';
 import { ItemService } from './../../../services/item.service';

@@ -1,8 +1,9 @@
+import { EventPostComponent } from './main/event-card/event-content/event-post/event-post.component';
 import { ItemService } from './services/item.service';
 import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './header/navbar/navbar.component';
@@ -15,6 +16,13 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { ItemComponent } from './item/item.component';
 import { EventContentComponent } from './main/event-card/event-content/event-content.component';
+import { MainComponent } from './main/main/main.component';
+
+const appRouter: Routes = [
+  {path: '', component: MainComponent},
+      {path: 'app-event-content', component: EventContentComponent},
+      {path: ':over/:url/:innh', component: EventPostComponent}
+];
 
 @NgModule({
   declarations: [
@@ -26,7 +34,9 @@ import { EventContentComponent } from './main/event-card/event-content/event-con
     JumbotronComponent,
     TurerComponent,
     ItemComponent,
-    EventContentComponent
+    EventContentComponent,
+    MainComponent,
+    EventPostComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
@@ -35,9 +45,7 @@ import { EventContentComponent } from './main/event-card/event-content/event-con
     BrowserModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase, 'k-sjer'),
-    RouterModule.forRoot([
-      {path: 'app-event-content', component: EventContentComponent},
-    ]),
+    RouterModule.forRoot(appRouter),
   ],
   providers: [
     ItemService

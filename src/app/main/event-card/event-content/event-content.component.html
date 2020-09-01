@@ -1,19 +1,19 @@
 <div *ngIf="items?.length > 0;else noItems">
-  <ul *ngFor="let item of items">
-    <li>
+
+</div>
+  <div class="row">
+    <div *ngFor="let item of items" class="col-md-6 col-xs-12 cardMargin">
       <div class="card" style="width: 18rem;">
         <img src="{{ item.urlBilde }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{ item.overskrift }}</h5>
-          <p class="card-text">{{ item.hovedInnhold }}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <p class="card-text">{{ item.intro }}</p>
+          <a [routerLink]="['', item.overskrift, item.urlBilde, item.hovedInnhold]" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
-    </li>
-  </ul>
-</div>
-
+    </div>
+  </div>
 <ng-template #noItems>
   <hr>
-  <h5>ingen event</h5>
+  <h3>Beklager det er ingen events her</h3>
 </ng-template>

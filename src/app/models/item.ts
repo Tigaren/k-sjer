@@ -3,5 +3,6 @@ export interface Item {
   hovedInnhold?: string;
   id?: string;
   urlBilde?: string;
+  intro?: string;
 }
 
