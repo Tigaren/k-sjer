@@ -1,14 +1,16 @@
 <div *ngIf="items?.length > 0;else noItems">
 
 </div>
-  <div class="row">
+  <div  class="row">
     <div *ngFor="let item of items" class="col-md-6 col-xs-12 cardMargin">
-      <div class="card" style="width: 18rem;">
+      <div *ngIf="item._fl_meta_.status == 'publish'" class="card" style="width: 18rem;">
         <img src="{{ item.urlBilde }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{ item.overskrift }}</h5>
           <p class="card-text">{{ item.intro }}</p>
-          <a [routerLink]="['', item.overskrift, item.urlBilde, item.hovedInnhold]" class="btn btn-primary">Go somewhere</a>
+          <a [routerLink]="['', item.id]" class="btn btn-primary">Go somewhere</a>
+          <p>{{ item.intro }}</p>
+
         </div>
       </div>
     </div>

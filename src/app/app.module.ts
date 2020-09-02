@@ -17,11 +17,12 @@ import { AngularFireModule } from '@angular/fire';
 import { ItemComponent } from './item/item.component';
 import { EventContentComponent } from './main/event-card/event-content/event-content.component';
 import { MainComponent } from './main/main/main.component';
+import { CommonModule } from '@angular/common';
 
 const appRouter: Routes = [
   {path: '', component: MainComponent},
       {path: 'app-event-content', component: EventContentComponent},
-      {path: ':over/:url/:innh', component: EventPostComponent}
+      {path: ':id', component: EventPostComponent}
 ];
 
 @NgModule({
@@ -42,6 +43,7 @@ const appRouter: Routes = [
     CUSTOM_ELEMENTS_SCHEMA
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase, 'k-sjer'),

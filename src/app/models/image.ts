@@ -1,3 +1,3 @@
-export interface Image {
-  file?: any;
+export interface Meta {
+  status?: any;
 }

@@ -1,5 +1,4 @@
-import { RouterModule } from '@angular/router';
-import { Image } from './../../../models/image';
+import { Meta } from './../../../models/image';
 import { Item } from './../../../models/item';
 import { ItemService } from './../../../services/item.service';
 import { Component, OnInit } from '@angular/core';
@@ -11,17 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventContentComponent implements OnInit {
   items: Item[];
-  image: Image[];
+  meta: Meta[];
 
   constructor(private itemService: ItemService) { }
 
   ngOnInit(): void {
     this.itemService.getItems().subscribe(items => {
       this.items = items;
-    });
-    this.itemService.getImage().subscribe(image => {
-      this.image = image;
-      console.log(this.image[0]);
+      this.meta = items[0]._fl_meta_;
+      console.log(this.meta);
     });
   }
 
