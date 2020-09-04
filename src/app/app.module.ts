@@ -1,3 +1,5 @@
+import { NewsContentComponent } from './main/news-card/news-content/news-content.component';
+import { NewsPostComponent } from './main/news-card/news-content/news-post/news-post.component';
 import { EventPostComponent } from './main/event-card/event-content/event-post/event-post.component';
 import { ItemService } from './services/item.service';
 import { environment } from './../environments/environment';
@@ -18,9 +20,11 @@ import { ItemComponent } from './item/item.component';
 import { EventContentComponent } from './main/event-card/event-content/event-content.component';
 import { MainComponent } from './main/main/main.component';
 import { CommonModule } from '@angular/common';
+import { SidebarComponent } from './main/sidebar/sidebar.component';
 
 const appRouter: Routes = [
-  {path: '', component: MainComponent},
+      {path: 'app-news-content', component: NewsContentComponent},
+      {path: '', component: MainComponent},
       {path: 'app-event-content', component: EventContentComponent},
       {path: ':id', component: EventPostComponent}
 ];
@@ -37,7 +41,10 @@ const appRouter: Routes = [
     ItemComponent,
     EventContentComponent,
     MainComponent,
-    EventPostComponent
+    EventPostComponent,
+    SidebarComponent,
+    NewsPostComponent,
+    NewsContentComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

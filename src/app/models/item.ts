@@ -5,6 +5,8 @@ export interface Item {
   id?: string;
   urlBilde?: string;
   intro?: string;
+  _fl_meta_?: any;
   status?: string;
+  schema?: string;
 }
 

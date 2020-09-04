@@ -1,3 +1,3 @@
 export interface Meta {
-  status?: any;
+  status?: string;
 }
