@@ -1,15 +1,17 @@
 <app-navbar></app-navbar>
 <app-jumbotron></app-jumbotron>
-<div class="container d-md-flex align-items-stretch">
+<div class="container">
+<div class="row">
   <!-- Page Content  -->
-  <div id="content" class="p-4 p-md-5 pt-5">
+  <div class="col-lg-9 col-12">
     <router-outlet></router-outlet>
   </div>
 
-  <nav id="sidebar">
+  <nav id="sidebar" class="col-lg-3">
     <app-sidebar></app-sidebar>
   </nav>
 </div>
-<footer class="page-footer font-small blue pt-4">
+</div>
+<footer>
   <app-footer></app-footer>
 </footer>

@@ -23,10 +23,11 @@ import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './main/sidebar/sidebar.component';
 
 const appRouter: Routes = [
-      {path: 'app-news-content', component: NewsContentComponent},
-      {path: '', component: MainComponent},
-      {path: 'app-event-content', component: EventContentComponent},
-      {path: ':id', component: EventPostComponent}
+  {path: '', component: MainComponent},
+  {path: 'nyheter', component: NewsContentComponent},
+  {path: 'event', component: EventContentComponent},
+  {path: ':id', component: EventPostComponent},
+  {path: ':id', component: NewsPostComponent}
 ];
 
 @NgModule({
