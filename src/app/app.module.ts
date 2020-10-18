@@ -1,3 +1,4 @@
+import { WeatherWidgetMainComponent } from './weather-widget-main/weather-widget-main.component';
 import { NewsContentComponent } from './main/news-card/news-content/news-content.component';
 import { NewsPostComponent } from './main/news-card/news-content/news-post/news-post.component';
 import { EventPostComponent } from './main/event-card/event-content/event-post/event-post.component';
@@ -45,7 +46,8 @@ const appRouter: Routes = [
     EventPostComponent,
     SidebarComponent,
     NewsPostComponent,
-    NewsContentComponent
+    NewsContentComponent,
+    WeatherWidgetMainComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

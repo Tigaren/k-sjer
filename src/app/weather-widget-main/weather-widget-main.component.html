@@ -1,0 +1,36 @@
+<div id="divWeatherMain">
+  <div *ngIf="WeatherData.icon == '01d'" class="weatherWidgetRow">
+    <img src="../../assets/images/01d@2x.png" alt="">
+  </div>
+  <div *ngIf="WeatherData.icon == '02d'" class="weatherWidgetRow">
+    <img src="../../assets/images/02d@2x.png" alt="">
+  </div>
+  <div *ngIf="WeatherData.icon == '03d'" class="weatherWidgetRow">
+    <img src="../../assets/images/03d@2x.png" alt="">
+  </div>
+  <div *ngIf="WeatherData.icon == '04d'" class="weatherWidgetRow">
+    <img src="../../assets/images/04d@2x.png" alt="">
+  </div>
+  <div *ngIf="WeatherData.icon == '09d'" class="weatherWidgetRow">
+    <img src="../../assets/images/09d@2x.png" alt="">
+  </div>
+  <div *ngIf="WeatherData.icon == '10d'" class="weatherWidgetRow">
+    <img src="../../assets/images/10d@2x.png" alt="">
+  </div>
+  <div *ngIf="WeatherData.icon == '11d'" class="weatherWidgetRow">
+    <img src="../../assets/images/11d@2x.png" alt="">
+  </div>
+  <div *ngIf="WeatherData.icon == '13d'" class="weatherWidgetRow">
+    <img src="../../assets/images/13d@2x.png" alt="">
+  </div>
+  <div *ngIf="WeatherData.icon == '50d'" class="weatherWidgetRow">
+    <img src="../../assets/images/50d@2x.png" alt="">
+  </div>
+
+
+  <div style="font-size: 32px;margin-top: 5px;" class="weatherWidgetRow">{{ WeatherData.temp_celcius }}&#8451;</div>
+  <div class="weatherWidgetRow" style="font-size: 12px;">Feels Like {{ WeatherData.temp_feels_like }}&#8451;</div>
+  <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px">{{ WeatherData.name }}</div>
+  <div class="weatherWidgetRow" style="font-size: 12px;">Luft Fuktighet: {{ WeatherData.main.humidity }}%</div>
+  <div class="weatherWidgetRow" style="font-size: 12px;">Solnedgang: {{ WeatherData.sunset_time }}</div>
+</div>
