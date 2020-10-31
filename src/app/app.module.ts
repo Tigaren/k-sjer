@@ -1,3 +1,4 @@
+import { ContactFormComponent } from './footer/contactForm/contactForm.component';
 import { WeatherWidgetMainComponent } from './weather-widget-main/weather-widget-main.component';
 import { NewsContentComponent } from './main/news-card/news-content/news-content.component';
 import { NewsPostComponent } from './main/news-card/news-content/news-post/news-post.component';
@@ -22,9 +23,12 @@ import { EventContentComponent } from './main/event-card/event-content/event-con
 import { MainComponent } from './main/main/main.component';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './main/sidebar/sidebar.component';
+import { CookieService } from 'ngx-cookie-service';
+import { BackToTopBtnComponent } from './back-to-top-btn/back-to-top-btn.component';
 
 const appRouter: Routes = [
   {path: '', component: MainComponent},
+  {path: 'contactForm', component: ContactFormComponent},
   {path: 'nyheter', component: NewsContentComponent},
   {path: 'event', component: EventContentComponent},
   {path: ':id', component: EventPostComponent},
@@ -47,7 +51,9 @@ const appRouter: Routes = [
     SidebarComponent,
     NewsPostComponent,
     NewsContentComponent,
-    WeatherWidgetMainComponent
+    WeatherWidgetMainComponent,
+    ContactFormComponent,
+    BackToTopBtnComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
@@ -60,7 +66,8 @@ const appRouter: Routes = [
     RouterModule.forRoot(appRouter),
   ],
   providers: [
-    ItemService
+    ItemService,
+    CookieService
   ],
   bootstrap: [AppComponent]
 })

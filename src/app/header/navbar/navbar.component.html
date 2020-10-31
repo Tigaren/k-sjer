@@ -1,14 +1,19 @@
-<div class="fixed-top">
+<div class="fixed-top nav-container">
   <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-      <h5 class="text-white h4">Collapsed content</h5>
-      <span class="text-muted">Toggleable via the navbar brand.</span>
+    <div class="p-4" style="background-color: #202020;">
+      <h5 class="text-white h4">Finn din vei her</h5>
+      <a routerLink="event" class="btn btn-primary">Eventer</a>
+      <a routerLink="nyheter" class="btn btn-primary">Nyheter</a>
+      <a routerLink="/" class="btn btn-primary">Turer</a>
     </div>
   </div>
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-dark">
     <button (click)="toggle()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <div class="hamburger"></div>
+      <div class="hamburger"></div>
+      <div class="hamburger"></div>
     </button>
-    <a routerLink="" class="navbar-brand">HOME</a>
+    <hr>
+    <a routerLink="" class="navbar-brand"><i class="fas fa-angle-left set-color"></i> HOME <i class="fas fa-angle-right set-color"></i></a>
   </nav>
 </div>

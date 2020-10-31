@@ -36,7 +36,12 @@ export class NewsPostComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    window.scrollTo(0, 0);
+  // tslint:disable-next-line: typedef
+  ngOnInit() {
+    window.scrollTo({
+      top: 250,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 }

@@ -1,4 +1,39 @@
 .jumbotron {
   margin-top: 56px;
   margin-bottom: 0;
+  background-color: #202020;
+  border-radius: 0%;
 }
+
+h1 {
+  color: #707070;
+}
+
+h2 {
+  color: #ffffff;
+  margin-right: 20vw;
+}
+
+p {
+  color: #ffffff;
+  margin-left: 15vw;
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+}
+

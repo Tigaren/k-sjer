@@ -33,3 +33,13 @@ footer {
     border: none;
   }
 }
+
+.btn-primary {
+  background-color: #3f3f3f;
+  color: #ffdf6c;
+  border-color: #ffdf6c;
+}
+
+.scroll {
+  max-height: 700px
+}

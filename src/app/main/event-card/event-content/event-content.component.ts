@@ -20,6 +20,12 @@ export class EventContentComponent implements OnInit {
       this.meta = items[0]._fl_meta_;
       console.log(this.meta);
     });
+
+    window.scrollTo({
+      top: 250,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
 }

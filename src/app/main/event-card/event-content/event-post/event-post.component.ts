@@ -37,6 +37,10 @@ export class EventPostComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 250,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 }

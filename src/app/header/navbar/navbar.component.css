@@ -1,0 +1,36 @@
+.nav-container {
+  background-color: #202020;
+}
+
+.set-color {
+  color: #ffdf6c;
+}
+
+.hamburger {
+  width: 35px;
+  height: 4px;
+  background-color: #ffdf6c;
+  margin: 6px 0;
+}
+
+.navbar-toggler {
+  border-color: #ffdf6c;
+}
+
+button:focus {
+  border-color: #ffdf6c;
+  outline: 0px;
+}
+
+button:active {
+  outline: 0px;
+}
+
+a {
+  margin: 10px;
+}
+
+hr {
+  border-color: #ffdf6c;
+  z-index: 10;
+}
