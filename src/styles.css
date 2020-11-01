@@ -40,6 +40,23 @@ footer {
   border-color: #ffdf6c;
 }
 
-.scroll {
-  max-height: 700px
+.btn-primary:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffdf6c;
+  border-color: #ffdf6c;
 }
+
+.btn-primary:active {
+  background-color: #202020 !important;
+  outline: 0;
+  color: #ffdf6c;
+  border-color: #ffdf6c;
+}
+
+.btn-primary:focus {
+  background-color: #202020;
+  outline: 0;
+  color: #ffdf6c;
+  border-color: #ffdf6c;
+}
+

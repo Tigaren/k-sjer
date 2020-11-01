@@ -14,6 +14,15 @@ export class NavbarComponent implements OnInit {
 
   }
 
+  // tslint:disable-next-line: typedef
+  toTop() {
+    window.scrollTo({
+      top: 250,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
   constructor() { }
 
   ngOnInit(): void {
